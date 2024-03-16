@@ -1,7 +1,7 @@
 <?php
 
 class Addition {
-    public function addition($num1, $num2) {
+    private function addition($num1, $num2) {
         return $num1 + $num2;
     }
 }
