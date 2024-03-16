@@ -1,63 +1,67 @@
 <?php
 
 class Addition {
-    private function addition($num1, $num2) {
-        return $num1 + $num2;
-    }
-
-    public function calculate($num1, $num2) {
-        return $this->addition($num1, $num2);
+    private $add;
+    public function addition($num1, $num2)
+	{
+		$this->add = $num1 + $num2;
+	}
+    public function calcu() {
+        return $this->add;
     }
 }
-
 $sum = new Addition();
-echo "ADDITION: ". $sum->calculate(1, 1);
+$sum->addition(1, 1);
+echo "ADDITION: ". $sum->calcu();
 ?>
 
 <?php
 
 class Multiplication {
-    private function multiply($num1, $num2) {
-        return $num1 * $num2;
-    }
-
-    public function calculate($num1, $num2) {
-        return $this->multiply($num1, $num2);
+    private $add;
+    public function multiply($num1, $num2)
+	{
+		$this->add = $num1 * $num2;
+	}
+    public function calcu() {
+        return $this->add;
     }
 }
-
 $sum = new Multiplication();
-echo "MULTIPLICATION: ". $sum->calculate(1, 1);
+$sum->multiply(1, 1);
+echo "MULTIPLICATION: ". $sum->calcu();
 ?>
 
 <?php
 
 class Subtraction {
-    private function minus($num1, $num2) {
-        return $num1 - $num2;
-    }
-
-    public function calculate($num1, $num2) {
-        return $this->minus($num1, $num2);
+    private $add;
+    public function minus($num1, $num2)
+	{
+		$this->add = $num1 - $num2;
+	}
+    public function calcu() {
+        return $this->add;
     }
 }
-
 $sum = new Subtraction();
-echo "SUBTRACTION: ". $sum->calculate(1, 1);
+$sum->minus(1, 1);
+echo "SUBTRACTION: ". $sum->calcu();
 ?>
 
 <?php
 
 class Division {
-    private function divide($num1, $num2) {
-        return $num1 / $num2;
-    }
-
-    public function calculate($num1, $num2) {
-        return $this->divide($num1, $num2);
+    private $add;
+    public function divide($num1, $num2)
+	{
+		$this->add = $num1 / $num2;
+	}
+    public function calcu() {
+        return $this->add;
     }
 }
-
 $sum = new Division();
-echo "DIVISION: ". $sum->calculate(1, 1);
+$sum->divide(1, 1);
+echo "DIVISION: ". $sum->calcu();
 ?>

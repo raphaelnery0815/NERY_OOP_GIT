@@ -1,14 +1,11 @@
 <?php
 class cmToft {
-    private function cmtoft($cm) {
-        return $cm * 0.0328084;
-    }
-
+    private $cmft;
     public function convert($cm) {
-        return $this->cmtoft($cm);
+        $this->cmft = $cm * 0.0328084;
+        return $this->cmft;
     }
 }
 $conversion = new cmToft();
-echo "CM TO FEET: ". $conversion->convert(100);
-
+echo "CM TO FEET: ". $conversion->convert(59);
 ?>
