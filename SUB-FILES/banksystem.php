@@ -119,7 +119,26 @@ echo "\nUPDATED INTEREST RATE: " . $saveaccount->getInterestRate();
 $saveaccount->addInterest();
 echo "\nCALCULATED BALANCE W/INTEREST: " . $saveaccount->getBalance();
 
+class Logger {
 
+    private $logFile;
+    
+    public function __construct($logFile = 'log.txt') {
+        $this->logFile = $logFile;
+    }
+    
+    public function Log($message, $className = '') {
+        $date = date('l j F H:i:s Y');
+        $logMessage = "$date: $className - $message\n";
+        $handle = fopen($this->logFile, 'a'); 
+        fwrite($handle, $logMessage); 
+        fclose($handle); 
+    }
+    }
+    
+    $logger = new Logger();
+    $logger->Log("Already Added", "Logged In");
+    echo $logger->Log("Already Added", "Logged In");
 
 /*
 //BANK SYSTEM
