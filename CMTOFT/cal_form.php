@@ -27,7 +27,7 @@
      </div>
     <div class= "row">
   <form action="calc.php" method="POST">
-      <input type="text" name="num1Inserted" placeholder="Input Value">
+      <input type="text" name="num1Inserted" required placeholder="Input Value">
 
       <select name="calInserted" class="btn btn-secondary dropdown-toggle">
         <option value="cmft">CM TO FT</option>
